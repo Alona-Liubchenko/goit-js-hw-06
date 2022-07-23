@@ -6,12 +6,15 @@ const ingredients = [
   "Herbs",
   "Condiments",
 ];
+const ingredientsLiEl = document.querySelector("#ingredients");
+const makeIngredientsLiEl = (names) => {
+  return names.map((name) => {
+    const liEl = document.createElement("li");
+    liEl.textContent = name;
+    liEl.classList = "item";
 
-const navEl = document.querySelector("#ingredients");
-
-const elements = navEl.map((element) => {
-  const navItemEl = document.createElement("li");
-  navItemEl.classList.add("item");
-});
-
-navEl.append(navItemEl);
+    return liEl;
+  });
+};
+const elements = makeIngredientsLiEl(ingredients);
+ingredientsLiEl.append(...elements);
