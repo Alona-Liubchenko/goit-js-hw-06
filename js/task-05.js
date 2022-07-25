@@ -1,8 +1,12 @@
-const input = document.querySelector("#name-input");
-let nameLable = document.querySelector("#name-output");
+const inputEl = document.querySelector("#name-input");
+const spanEl = document.querySelector("#name-output");
 
-input.addEventListener("input", onInputChange);
-function onInputChange(event) {
-  console.log(event.currentTarget.value);
-  nameLable.textContent = event.currentTarget.value;
-}
+const inputName = () => {
+  if (inputEl.value === "") {
+    spanEl.textContent = "Anonymous";
+  } else {
+    spanEl.textContent = inputEl.value;
+  }
+};
+
+inputEl.addEventListener("input", inputName);
