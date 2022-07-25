@@ -1,6 +1,6 @@
 const inputEl = document.querySelector("#validation-input");
 
-const inputValid = (event) => {
+const onInputValid = (event) => {
   if (
     event.currentTarget.value.length ===
     Number(event.currentTarget.dataset.length)
@@ -12,4 +12,4 @@ const inputValid = (event) => {
     inputEl.classList.add("invalid");
   }
 };
-inputEl.addEventListener("blur", inputValid);
+inputEl.addEventListener("blur", onInputValid);

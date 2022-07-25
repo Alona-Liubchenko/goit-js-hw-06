@@ -7,15 +7,15 @@ const createBtnEl = document.querySelector("button[data-create]");
 const destroyBtnEl = document.querySelector("button[data-destroy]");
 const divBoxesEl = document.querySelector("#boxes");
 
-createBtnEl.addEventListener("click", onClickCreate);
-destroyBtnEl.addEventListener("click", onClickDestroy);
+createBtnEl.addEventListener("click", onCreateClick);
+destroyBtnEl.addEventListener("click", onDestroyClick);
 
-function onClickCreate() {
+function onCreateClick() {
   deleteBoxes();
   createBoxes(inputEl.value);
 }
 
-function onClickDestroy() {
+function onDestroyClick() {
   inputEl.value = "";
   deleteBoxes();
 }
