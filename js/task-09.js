@@ -9,6 +9,7 @@ const newColor = document.querySelector(".color");
 changeColorBtn.addEventListener("click", onChengeColorBtn);
 
 function onChengeColorBtn() {
-  colorBody.style.backgroundColor = getRandomHexColor();
-  newColor.textContent = getRandomHexColor();
+  let color = getRandomHexColor();
+  colorBody.style.backgroundColor = color;
+  newColor.textContent = color;
 }
